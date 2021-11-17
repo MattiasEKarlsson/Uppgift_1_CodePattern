@@ -11,7 +11,14 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
 {
     internal class CheckInAndOutPet : ICheckInAndOutPet
     {
-        
+        private readonly IDog _dog;
+        private readonly ICalcBill _calcBill;
+
+        public CheckInAndOutPet(IDog dog, ICalcBill calcBill)
+        {
+            _dog = dog;
+            _calcBill = calcBill;
+        }
 
         public void CheckInPet(List<IPet> pets)
         {
@@ -20,12 +27,15 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
             if (inputName != null)
             {
                 IPet pet = pets.FirstOrDefault(name => name.name.ToLower() == inputName.ToLower());
+                IDog dog = (IDog)pet;
                 if (pet != null)
                 {
-                    pet.atKennel = true;
+                    dog.atKennel = true;
+                    dog.clawTrim = _dog.AskForTrimClaws();
+                    dog.doWash = _dog.AskForWash();
                     
-                    Console.WriteLine(pet.AskForTrimClaws()); 
-                    
+
+
                     Console.WriteLine($"Checked in {pet.name}");
                 }
                 else
@@ -43,9 +53,11 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
             if (inputName != null)
             {
                 IPet pet = pets.FirstOrDefault(name => name.name.ToLower() == inputName.ToLower());
-                if (pet != null && pet.atKennel == true)
+                IDog dog = (IDog)pet;
+                if (dog != null && dog.atKennel == true)
                 {
-                    pet.atKennel = false;
+                    dog.atKennel = false;
+                    _calcBill.CalcTotal(dog);
                     //_checkOutPet.CalcTotal(pet);
                 }
                 else

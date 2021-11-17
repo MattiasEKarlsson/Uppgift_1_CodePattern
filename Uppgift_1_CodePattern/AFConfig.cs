@@ -12,7 +12,6 @@ using Uppgift_1_CodePattern.Interfaces.Mangment;
 using Uppgift_1_CodePattern.Interfaces.PetMangment;
 using Uppgift_1_CodePattern.Models;
 using Uppgift_1_CodePattern.Models.DailyManagment;
-using Uppgift_1_CodePattern.Models.ExtraServices;
 using Uppgift_1_CodePattern.Models.Managment;
 using Uppgift_1_CodePattern.Models.Pets;
 
@@ -34,10 +33,9 @@ namespace Uppgift_1_CodePattern
             builder.RegisterType<SeeAllCats>().As<IPrintAllCats>();
             builder.RegisterType<CheckInAndOutPet>().As<ICheckInAndOutPet>();
             builder.RegisterType<Owner>().As<ICustomer>();
-            builder.RegisterType<Dog>().As<IPet>();
-            
-            builder.RegisterType<DogServices>().As<IWash>();
-            builder.RegisterType<DogServices>().As<ITrim>();
+            builder.RegisterType<Dog>().As<IDog>();
+            builder.RegisterType<CalculateBill>().As<ICalcBill>();
+
 
 
 

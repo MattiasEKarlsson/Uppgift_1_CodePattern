@@ -7,7 +7,7 @@ using Uppgift_1_CodePattern.Interfaces.ExtraServices;
 
 namespace Uppgift_1_CodePattern.Interfaces
 {
-    internal interface IPet : ITrim
+    internal interface IPet 
     {
         
         string name { get; set; }
