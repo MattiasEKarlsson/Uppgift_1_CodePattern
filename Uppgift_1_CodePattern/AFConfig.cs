@@ -34,7 +34,7 @@ namespace Uppgift_1_CodePattern
             builder.RegisterType<CheckInAndOutPet>().As<ICheckInAndOutPet>();
             builder.RegisterType<Owner>().As<ICustomer>();
             builder.RegisterType<Dog>().As<IDog>();
-            builder.RegisterType<CalculateBill>().As<ICalcBill>();
+            builder.RegisterType<CalculateBill_Dog>().As<ICalcBill>();
 
 
 

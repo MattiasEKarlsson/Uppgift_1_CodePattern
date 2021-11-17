@@ -8,7 +8,7 @@ using Uppgift_1_CodePattern.Interfaces.DailyServices;
 
 namespace Uppgift_1_CodePattern.Models.DailyManagment
 {
-    internal class CalculateBill : ICalcBill
+    internal class CalculateBill_Dog : ICalcBill
     {
         public void CalcTotal(IPet pet)
         {
