@@ -5,17 +5,22 @@ using System.Text;
 using System.Threading.Tasks;
 using Uppgift_1_CodePattern.Interfaces;
 using Uppgift_1_CodePattern.Interfaces.CustomerManagment;
+using Uppgift_1_CodePattern.Interfaces.Tools;
 using Uppgift_1_CodePattern.Models.Customers;
 
 namespace Uppgift_1_CodePattern.Models.Managment
 {
     internal class CreateOwnerFactory : ICreateCustomer
     {
-        private OwnerFactory.Factory _factory;
+        private Owner.Factory _factory;
+        private ITools _tools;
 
-        public CreateOwnerFactory(OwnerFactory.Factory factory)
+
+
+        public CreateOwnerFactory(Owner.Factory factory, ITools tools)
         {
             _factory = factory;
+            _tools = tools;
         }
 
         public ICustomer CreateCustomer()
@@ -29,12 +34,12 @@ namespace Uppgift_1_CodePattern.Models.Managment
             Console.WriteLine("Enter Email:");
             string email = Console.ReadLine();
 
-            ICustomer cus = _factory(firstName, lastName, phoneNumber, email);
-            Console.Clear();
-            Console.WriteLine("Customer added.");
-            Thread.Sleep(2000);
-            Console.Clear();
-            return cus;
+            ICustomer customer = _factory(firstName, lastName, phoneNumber, email);
+            _tools.ConfirmAndClearConsol("Customer added.");
+            
+            return customer;
+            
         }
+        
     }
 }

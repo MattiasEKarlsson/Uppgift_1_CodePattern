@@ -8,11 +8,11 @@ using Uppgift_1_CodePattern.Interfaces.CustomerManagment;
 
 namespace Uppgift_1_CodePattern.Models.Managment
 {
-    internal class CreateOwner : ICreateCustomer
+    internal class CreateOwner_OLD : ICreateCustomer
     {
         public readonly ICustomer _customer;
 
-        public CreateOwner(ICustomer customer)
+        public CreateOwner_OLD(ICustomer customer)
         {
             _customer = customer;
         }
