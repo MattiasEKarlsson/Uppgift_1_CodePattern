@@ -37,19 +37,17 @@ namespace Uppgift_1_CodePattern.Models
 
         public void CreateMenu(List<ICustomer> customers, List<IPet> pets)
         {
-            bool isRunning = true;
-            while (isRunning)
+            while (true)
             {
-                Console.WriteLine(" ");
                 Console.WriteLine("[1]Check in animal");
                 Console.WriteLine("[2]Check out animal");
-                Console.WriteLine("------------------");
+                Console.WriteLine(" ");
                 Console.WriteLine("[3]See animals at kennel");
                 Console.WriteLine("[4]See all clients");
                 Console.WriteLine("[5]See all Pets");
                 Console.WriteLine("[6]See all Dogs");
                 Console.WriteLine("[7]See all Cats");
-                Console.WriteLine("------------------");
+                Console.WriteLine(" ");
                 Console.WriteLine("[8]Add client");
                 Console.WriteLine("[9]Add animal");
                 Console.WriteLine("[0]Exit application");
@@ -102,10 +100,10 @@ namespace Uppgift_1_CodePattern.Models
                             pets.Add(_createPet.CreatePet(customers));
                             break;
                         case "0":
-                            isRunning = false;
+                            Environment.Exit(0);
                             break;
                         default:
-                            // code block
+                            
                             break;
                     }
                 }

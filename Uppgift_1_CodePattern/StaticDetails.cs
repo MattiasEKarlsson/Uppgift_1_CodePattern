@@ -8,7 +8,7 @@ namespace Uppgift_1_CodePattern
 {
     internal class StaticDetails
     {
-        public const int PricePerAnimal = 400;
+        public const int PricePerAnimal = 300;
         public const int PriceTrim = 150;
         public const int PricePerWash = 125;
     }

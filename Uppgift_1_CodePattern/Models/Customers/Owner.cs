@@ -9,9 +9,11 @@ namespace Uppgift_1_CodePattern.Models
 {
     internal class Owner : ICustomer
     {
+
         public string firstName { get; set; }
         public string lastName { get; set; }
         public string phoneNumber { get; set; }
         public string email { get; set; }
+
     }
 }

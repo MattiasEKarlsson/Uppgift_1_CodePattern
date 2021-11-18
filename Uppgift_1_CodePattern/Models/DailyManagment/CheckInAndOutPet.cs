@@ -40,9 +40,9 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
                 {
                     Console.WriteLine($"Not found or already here.");
                 }
+            
 
-            
-            
+
         }
 
         public void CheckOutPet(List<IPet> pets)
@@ -61,8 +61,8 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
                 {
                     Console.WriteLine("Not found");
                 }
-
             
+
         }
     }
 }

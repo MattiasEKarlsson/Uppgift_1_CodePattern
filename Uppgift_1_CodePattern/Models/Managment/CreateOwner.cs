@@ -19,7 +19,7 @@ namespace Uppgift_1_CodePattern.Models.Managment
 
         public ICustomer CreateCustomer()
         {
-            
+
             Console.WriteLine("Enter first name:");
             _customer.firstName = Console.ReadLine();
             Console.WriteLine("Enter last name:");
@@ -28,8 +28,10 @@ namespace Uppgift_1_CodePattern.Models.Managment
             _customer.phoneNumber = Console.ReadLine();
             Console.WriteLine("Enter Email:");
             _customer.email = Console.ReadLine();
-            
+
             return _customer;
         }
+
+       
     }
 }

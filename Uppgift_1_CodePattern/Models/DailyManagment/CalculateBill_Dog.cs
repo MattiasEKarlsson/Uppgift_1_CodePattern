@@ -14,6 +14,8 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
         {
             int total = StaticDetails.PricePerAnimal;
             IDog dog = (IDog)pet;
+
+            Console.WriteLine($"Daily stay: {StaticDetails.PricePerAnimal} kr");
             if (dog.clawTrim)
             {
                 total += StaticDetails.PriceTrim;
@@ -26,6 +28,7 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
             }
             Console.WriteLine($"Total:{total}");
             Console.WriteLine($"Checked out {dog.name}");
+            
         }
     }
 }

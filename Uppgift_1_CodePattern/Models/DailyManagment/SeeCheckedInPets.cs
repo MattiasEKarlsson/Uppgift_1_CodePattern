@@ -19,6 +19,7 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
             {
                 Console.WriteLine($"{pet.name} Owner:{pet.owner.firstName} Owners phonnumber: {pet.owner.phoneNumber}");
             }
+
         }
     }
 }
