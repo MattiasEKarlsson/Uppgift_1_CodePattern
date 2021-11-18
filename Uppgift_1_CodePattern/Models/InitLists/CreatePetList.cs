@@ -19,10 +19,7 @@ namespace Uppgift_1_CodePattern.Models.InitLists
               new Dog { name="Max", owner= customer[2]  },
               new Dog { name="Sigge", owner= customer[3], atKennel=true   },
               new Dog { name="Rocky", owner= customer[4]  },
-              new Cat { name="Gustaf", owner= customer[5], atKennel=true, clawLeanth=1 } 
-
         };
-            
             return pets;
         }
     }

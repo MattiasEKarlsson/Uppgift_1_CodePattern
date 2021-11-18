@@ -11,9 +11,6 @@ namespace Uppgift_1_CodePattern.Models
     internal class Application : IApplication
     {
         IMainMenu _mainMenu;
-
-       
-
         public Application(IMainMenu mainMenu)
         {
             _mainMenu = mainMenu;

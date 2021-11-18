@@ -24,48 +24,45 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
         {
             Console.WriteLine("Enter name of pet to check in:");
             string inputName = Console.ReadLine();
-            if (inputName != null)
-            {
+            
                 IPet pet = pets.FirstOrDefault(name => name.name.ToLower() == inputName.ToLower());
                 IDog dog = (IDog)pet;
-                if (pet != null)
+
+                if (dog != null && dog.atKennel == false)
                 {
                     dog.atKennel = true;
                     dog.clawTrim = _dog.AskForTrimClaws();
                     dog.doWash = _dog.AskForWash();
-                    
 
-
-                    Console.WriteLine($"Checked in {pet.name}");
+                    Console.WriteLine($"Checked in {dog.name}");
                 }
                 else
                 {
-                    Console.WriteLine("Not found");
+                    Console.WriteLine($"Not found or already here.");
                 }
 
-            }
+            
+            
         }
 
         public void CheckOutPet(List<IPet> pets)
         {
             Console.WriteLine("Enter name of pet to check out:");
             string inputName = Console.ReadLine();
-            if (inputName != null)
-            {
+
                 IPet pet = pets.FirstOrDefault(name => name.name.ToLower() == inputName.ToLower());
                 IDog dog = (IDog)pet;
                 if (dog != null && dog.atKennel == true)
                 {
                     dog.atKennel = false;
                     _calcBill.CalcTotal(dog);
-                    //_checkOutPet.CalcTotal(pet);
                 }
                 else
                 {
                     Console.WriteLine("Not found");
                 }
 
-            }
+            
         }
     }
 }
