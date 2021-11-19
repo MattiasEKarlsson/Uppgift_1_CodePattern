@@ -47,15 +47,16 @@ namespace Uppgift_1_CodePattern.Models
                 Console.WriteLine("*************************");
                 Console.WriteLine("[0]Exit application");
 
-                string choise = Console.ReadLine();
-                if (choise != "1" && choise != "2" && choise != "3" && choise != "4" && choise != "5" && choise != "6" && choise != "7" && choise != "0" && choise != "8" && choise != "9")
+                var input = Console.ReadKey(true);
+                string choice = input.KeyChar.ToString();
+                if (choice != "1" && choice != "2" && choice != "3" && choice != "4" && choice != "5" && choice != "6" && choice != "7" && choice != "0" && choice != "8" && choice != "9")
                 {
                     Console.Clear();
 
                 }
                 else
                 {
-                    switch (choise)
+                    switch (choice)
                     {
                         case "1":
                             Console.Clear();
