@@ -25,6 +25,7 @@ namespace Uppgift_1_CodePattern.Models.Managment
 
         public ICustomer CreateCustomer()
         {
+            
             Console.WriteLine("Enter first name:");
             string firstName = Console.ReadLine();
             Console.WriteLine("Enter last name:");
