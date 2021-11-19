@@ -13,9 +13,9 @@ namespace Uppgift_1_CodePattern.Models.Managment
     internal class CreateDogFactory : ICreatePet
     {
         private ITools _tools;
-        private Dog_TEST.Factory _factory;
+        private Dog.Factory _factory;
 
-        public CreateDogFactory(ITools tools, Dog_TEST.Factory factory)
+        public CreateDogFactory(ITools tools, Dog.Factory factory)
         {
             _tools = tools;
             _factory = factory;
@@ -26,13 +26,14 @@ namespace Uppgift_1_CodePattern.Models.Managment
            
             Console.WriteLine("Enter pets name:");
             string petName = Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Enter owners phonenumber:");
             string input = Console.ReadLine();
+            Console.Clear();
             ICustomer owner = customers.FirstOrDefault(name => name.phoneNumber == input);
             if (owner != null)
             {
                 ICustomer customer = owner;
-                Console.WriteLine("Pet added!");
                 _tools.ConfirmAndClearConsol("Pet successfully registered.");
                 return _factory(petName, customer, false, false, false);
             }

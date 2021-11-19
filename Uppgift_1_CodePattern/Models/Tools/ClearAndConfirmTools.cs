@@ -11,9 +11,9 @@ namespace Uppgift_1_CodePattern.Models.Tools
     {
         public void ConfirmAndClearConsol(string message)
         {
-            Console.Clear();
+            
             Console.WriteLine(message);
-            Console.WriteLine("Press key to continue.");
+            Console.WriteLine("Press [Enter] to continue.");
             Console.ReadLine();
             Console.Clear();
         }
@@ -22,7 +22,15 @@ namespace Uppgift_1_CodePattern.Models.Tools
         {
             Console.Clear();
             Console.WriteLine(message);
-            Console.WriteLine("Press key to continue.");
+            Console.WriteLine("Press [Enter] to continue.");
+            Console.ReadLine();
+            Console.Clear();
+        }
+
+        public void WaitForKeyPress()
+        {
+            Console.WriteLine("***********************");
+            Console.WriteLine("Press [Enter] to continue.");
             Console.ReadLine();
             Console.Clear();
         }

@@ -5,20 +5,27 @@ using System.Text;
 using System.Threading.Tasks;
 using Uppgift_1_CodePattern.Interfaces;
 using Uppgift_1_CodePattern.Interfaces.PetMangment;
+using Uppgift_1_CodePattern.Interfaces.Tools;
 
 namespace Uppgift_1_CodePattern.Models.Managment
 {
     internal class SeeAllPets : IPrintAllPets
     {
+        private readonly ITools _tools;
+        public SeeAllPets(ITools tools)
+        {
+            _tools = tools;
+        }
         public void PrintAllPets(List<IPet> pets)
         {
             Console.WriteLine("All Pets");
-            Console.WriteLine("---------------------");
-            
+            Console.WriteLine("******************");
+
             foreach (var pet in pets)
             {
-                Console.WriteLine($"{pet.name} Owner: {pet.owner.firstName} Phone: {pet.owner.phoneNumber} AtKennel: {pet.atKennel}");
+                Console.WriteLine($"{pet.name} Owner: {pet.owner.firstName} Phone: {pet.owner.phoneNumber}");
             }
+            _tools.WaitForKeyPress();
         }
     }
 }

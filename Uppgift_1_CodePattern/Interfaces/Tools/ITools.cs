@@ -10,5 +10,7 @@ namespace Uppgift_1_CodePattern.Interfaces.Tools
     {
         void ConfirmAndClearConsol(string message);
         void ErrorMessageConsol(string message);
+
+        void WaitForKeyPress();
     }
 }

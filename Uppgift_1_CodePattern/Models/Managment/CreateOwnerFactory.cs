@@ -28,12 +28,16 @@ namespace Uppgift_1_CodePattern.Models.Managment
             
             Console.WriteLine("Enter first name:");
             string firstName = Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Enter last name:");
             string lastName = Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Enter phonenumber:");
             string phoneNumber = Console.ReadLine();
+            Console.Clear();
             Console.WriteLine("Enter Email:");
             string email = Console.ReadLine();
+            Console.Clear();
 
             ICustomer customer = _factory(firstName, lastName, phoneNumber, email);
             _tools.ConfirmAndClearConsol("Customer added.");

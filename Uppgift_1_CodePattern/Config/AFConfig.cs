@@ -28,31 +28,23 @@ namespace Uppgift_1_CodePattern
             builder.RegisterType<Application>().As<IApplication>();
             builder.RegisterType<ConsoleMenu>().As<IMainMenu>();
 
-            //Create Dog/Pet
-            builder.RegisterType<CreateDogFactory>().As<ICreatePet>();
-            builder.RegisterType<Dog_TEST>().As<IDog>();
-            builder.RegisterType<Dog_TEST>();
-
-
-            builder.RegisterType<SeeAllOwners>().As<IPrintCustomerInfo>();
-
-
-            builder.RegisterType<SeeCheckedInPets>().As<ISeeCheckedInPets>();
-            builder.RegisterType<SeeAllPets>().As<IPrintAllPets>();
-            builder.RegisterType<SeeAllDogs>().As<IPrintAllDogs>();
-            builder.RegisterType<SeeAllCats>().As<IPrintAllCats>();
-
-
-            builder.RegisterType<CheckInAndOutPet>().As<ICheckInAndOutPet>();
-
-            builder.RegisterType<CalculateBill_Dog>().As<ICalcBill>();
-
-            builder.RegisterType<ClearAndConfirmTools>().As<ITools>();
-
             //Create Owner
             builder.RegisterType<Owner>().As<ICustomer>();
             builder.RegisterType<CreateOwnerFactory>().As<ICreateCustomer>();
             builder.RegisterType<Owner>();
+            //Create Dog/Pet
+            builder.RegisterType<CreateDogFactory>().As<ICreatePet>();
+            builder.RegisterType<Dog>().As<IDog>();
+            builder.RegisterType<Dog>();
+
+
+            builder.RegisterType<SeeAllOwners>().As<IPrintCustomerInfo>();
+            builder.RegisterType<SeeCheckedInPets>().As<ISeeCheckedInPets>();
+            builder.RegisterType<SeeAllPets>().As<IPrintAllPets>();
+            builder.RegisterType<CheckInAndOutPet>().As<ICheckInAndOutPet>();
+            builder.RegisterType<CalculateBill_Dog>().As<ICalcBill>();
+            builder.RegisterType<ClearAndConfirmTools>().As<ITools>();
+
 
 
 
