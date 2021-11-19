@@ -30,7 +30,7 @@ namespace Uppgift_1_CodePattern.Models.Managment
             Console.WriteLine("Enter owners phonenumber:");
             string input = Console.ReadLine();
             Console.Clear();
-            ICustomer owner = customers.FirstOrDefault(name => name.phoneNumber == input);
+            ICustomer owner = customers.FirstOrDefault(name => name.PhoneNumber == input);
             if (owner != null)
             {
                 ICustomer customer = owner;

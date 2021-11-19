@@ -8,9 +8,9 @@ namespace Uppgift_1_CodePattern.Interfaces
 {
     internal interface ICustomer
     {
-        string firstName { get; set; }
-        string lastName { get; set; }
-        string phoneNumber { get; set; }
-        string email { get; set; }
+        string FirstName { get; set; }
+        string LastName { get; set; }
+        string PhoneNumber { get; set; }
+        string Email { get; set; }
     }
 }

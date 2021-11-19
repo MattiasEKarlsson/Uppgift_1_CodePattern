@@ -19,12 +19,12 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
 
         public void SeePetsAtKennel(List<IPet> pets)
         {
-            IEnumerable<IPet> query = pets.Where(animal => animal.atKennel == true);
+            IEnumerable<IPet> query = pets.Where(animal => animal.AtKennel == true);
             Console.WriteLine($"{query.Count()} animals is at the kennel.");
             Console.WriteLine("**********************");
             foreach (IPet pet in query)
             {
-                Console.WriteLine($"{pet.name} Owner:{pet.owner.firstName} Owners phonnumber: {pet.owner.phoneNumber}");
+                Console.WriteLine($"{pet.Name} Owner:{pet.Owner.FirstName} Owners phonnumber: {pet.Owner.PhoneNumber}");
             }
             _tools.WaitForKeyPress();
         }

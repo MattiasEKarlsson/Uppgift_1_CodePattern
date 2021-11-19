@@ -9,7 +9,7 @@ namespace Uppgift_1_CodePattern.Interfaces
 {
     internal interface IDog : IPet, ITrim, IWash
     {
-        bool doWash { get; set; }
-        bool clawTrim { get; set; }
+        bool DoWash { get; set; }
+        bool ClawTrim { get; set; }
     }
 }

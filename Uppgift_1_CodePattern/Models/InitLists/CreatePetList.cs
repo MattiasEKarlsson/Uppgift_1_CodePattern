@@ -14,11 +14,11 @@ namespace Uppgift_1_CodePattern.Models.InitLists
         {
             List<IPet> pets = new List<IPet>
         {
-              new Dog { name="Fido", owner = customer[0]},
-              new Dog { name="Ludde", owner= customer[1], atKennel=true },
-              new Dog { name="Max", owner= customer[2]  },
-              new Dog { name="Sigge", owner= customer[3], atKennel=true   },
-              new Dog { name="Rocky", owner= customer[4]  },
+              new Dog { Name="Fido", Owner = customer[0]},
+              new Dog { Name="Ludde", Owner= customer[1], AtKennel=true },
+              new Dog { Name="Max", Owner= customer[2]  },
+              new Dog { Name="Sigge", Owner= customer[3], AtKennel=true   },
+              new Dog { Name="Rocky", Owner= customer[4]  },
         };
             return pets;
         }

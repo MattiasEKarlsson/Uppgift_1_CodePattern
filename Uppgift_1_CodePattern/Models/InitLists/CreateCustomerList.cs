@@ -14,12 +14,12 @@ namespace Uppgift_1_CodePattern.Models.InitLists
         {
             List<ICustomer> customers = new List<ICustomer>
         {
-              new Owner { firstName="Gustaf", lastName="Larsson", phoneNumber="1111", email="a@a.com" },
-              new Owner { firstName="Sven", lastName="Karlsson", phoneNumber="2222", email="b@a.com"  },
-              new Owner { firstName="Adolf", lastName="Andersson", phoneNumber="3333", email="c@a.com"},
-              new Owner{ firstName="Karl", lastName="Gustafsson", phoneNumber="4444", email="d@a.com" },
-              new Owner { firstName="Bert", lastName="Svensson", phoneNumber="5555", email="e@a.com" },
-              new Owner { firstName="John", lastName="Johnsson", phoneNumber="6666", email="f@a.com" }
+              new Owner { FirstName="Gustaf", LastName="Larsson", PhoneNumber="1111", Email="a@a.com" },
+              new Owner { FirstName="Sven", LastName="Karlsson", PhoneNumber="2222", Email="b@a.com"  },
+              new Owner { FirstName="Adolf", LastName="Andersson", PhoneNumber="3333", Email="c@a.com"},
+              new Owner{ FirstName="Karl", LastName="Gustafsson", PhoneNumber="4444", Email="d@a.com" },
+              new Owner { FirstName="Bert", LastName="Svensson", PhoneNumber="5555", Email="e@a.com" },
+              new Owner { FirstName="John", LastName="Johnsson", PhoneNumber="6666", Email="f@a.com" }
 
         };
             return customers;

@@ -24,12 +24,12 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
             IDog dog = (IDog)pet;
 
             Console.WriteLine($"Daily stay: {StaticDetails.PricePerAnimal} kr");
-            if (dog.clawTrim)
+            if (dog.ClawTrim)
             {
                 total += StaticDetails.PriceTrim;
                 Console.WriteLine($"Clawtrim: {StaticDetails.PriceTrim} kr");
             }
-            if (dog.doWash)
+            if (dog.DoWash)
             {
                 total += StaticDetails.PricePerWash;
                 Console.WriteLine($"Wash: {StaticDetails.PricePerWash} kr");

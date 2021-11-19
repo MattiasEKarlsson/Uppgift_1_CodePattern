@@ -35,15 +35,15 @@ namespace Uppgift_1_CodePattern.Models
         {
             while (true)
             {
-                Console.WriteLine("[1]Check in animal");
-                Console.WriteLine("[2]Check out animal");
+                Console.WriteLine("[1]Check in pet");
+                Console.WriteLine("[2]Check out pet");
                 Console.WriteLine("*************************");
-                Console.WriteLine("[3]See animals at kennel");
-                Console.WriteLine("[4]See all clients");
-                Console.WriteLine("[5]See all Pets");
+                Console.WriteLine("[3]See pets at kennel");
+                Console.WriteLine("[4]See all customers");
+                Console.WriteLine("[5]See all pet");
                 Console.WriteLine("*************************");
-                Console.WriteLine("[6]Add client");
-                Console.WriteLine("[7]Add animal");
+                Console.WriteLine("[6]Add customer");
+                Console.WriteLine("[7]Add pet");
                 Console.WriteLine("*************************");
                 Console.WriteLine("[0]Exit application");
 

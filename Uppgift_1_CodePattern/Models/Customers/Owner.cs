@@ -9,23 +9,26 @@ namespace Uppgift_1_CodePattern.Models.Customers
 {
     internal class Owner : ICustomer
     {
-        public Owner(string firstName, string lastName, string phoneNumber, string email)
-        {
-            this.firstName = firstName;
-            this.lastName = lastName;
-            this.phoneNumber = phoneNumber;
-            this.email = email;
-        }
+        
         public Owner()
         {
 
         }
+
+        public Owner(string firstName, string lastName, string phoneNumber, string email)
+        {
+            FirstName = firstName;
+            LastName = lastName;
+            PhoneNumber = phoneNumber;
+            Email = email;
+        }
+
         public delegate Owner Factory(string firstName, string lastName, string phoneNumber, string email);
 
 
-        public string firstName { get; set; }
-        public string lastName { get; set; }
-        public string phoneNumber { get; set; }
-        public string email { get; set; }
+        public string FirstName { get; set; }
+        public string LastName { get; set; }
+        public string PhoneNumber { get; set; }
+        public string Email { get; set; }
     }
 }

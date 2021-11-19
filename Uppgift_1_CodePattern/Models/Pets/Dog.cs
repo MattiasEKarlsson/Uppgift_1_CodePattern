@@ -11,11 +11,11 @@ namespace Uppgift_1_CodePattern.Models.Pets
     {
         public Dog(string name, ICustomer owner, bool atKennel, bool doWash, bool clawTrim)
         {
-            this.name = name;
-            this.owner = owner;
-            this.atKennel = atKennel;
-            this.doWash = doWash;
-            this.clawTrim = clawTrim;
+            this.Name = name;
+            this.Owner = owner;
+            this.AtKennel = atKennel;
+            this.DoWash = doWash;
+            this.ClawTrim = clawTrim;
         }
 
         public Dog()
@@ -24,12 +24,12 @@ namespace Uppgift_1_CodePattern.Models.Pets
         }
         public delegate Dog Factory(string name, ICustomer owner, bool atKennel, bool doWash, bool clawTrim);
 
-        //STOPP
-        public string name { get; set; }
-        public ICustomer owner { get; set; }
-        public bool atKennel { get; set; }
-        public bool doWash { get; set; }
-        public bool clawTrim { get; set; }
+        
+        public string Name { get; set; }
+        public ICustomer Owner { get; set; }
+        public bool AtKennel { get; set; }
+        public bool DoWash { get; set; }
+        public bool ClawTrim { get; set; }
 
         public bool AskForTrimClaws()
         {
@@ -53,7 +53,7 @@ namespace Uppgift_1_CodePattern.Models.Pets
             Console.Clear();
             if (input == "y")
             {
-                this.doWash = true;
+                
                 return true;
             }
             else

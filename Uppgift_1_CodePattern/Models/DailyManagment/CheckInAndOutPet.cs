@@ -28,24 +28,24 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
             Console.WriteLine("Enter name of pet to check in:");
             string inputName = Console.ReadLine();
             
-                IPet pet = pets.FirstOrDefault(name => name.name.ToLower() == inputName.ToLower());
+                IPet pet = pets.FirstOrDefault(name => name.Name.ToLower() == inputName.ToLower());
                 IDog dog = (IDog)pet;
                 Console.Clear();
 
-                if (dog != null && dog.atKennel == false)
+                if (dog != null && dog.AtKennel == false)
                 {
-                    dog.atKennel = true;
-                    dog.clawTrim = _dog.AskForTrimClaws();
-                    dog.doWash = _dog.AskForWash();
-                     if (dog.clawTrim)
+                    dog.AtKennel = true;
+                    dog.ClawTrim = _dog.AskForTrimClaws();
+                    dog.DoWash = _dog.AskForWash();
+                     if (dog.ClawTrim)
                      {
                         Console.WriteLine("Added trim today.");
                      }
-                     if (dog.doWash)
+                     if (dog.DoWash)
                      {
                          Console.WriteLine("Added a wash today.");
                      }
-                     _tools.ConfirmAndClearConsol($"Checked in {dog.name}");
+                     _tools.ConfirmAndClearConsol($"Checked in {dog.Name}");
                 
                 }
                 else
@@ -62,13 +62,13 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
             Console.WriteLine("Enter name of pet to check out:");
             string inputName = Console.ReadLine();
                 Console.Clear();
-                IPet pet = pets.FirstOrDefault(name => name.name.ToLower() == inputName.ToLower());
+                IPet pet = pets.FirstOrDefault(name => name.Name.ToLower() == inputName.ToLower());
                 IDog dog = (IDog)pet;
-                if (dog != null && dog.atKennel == true)
+                if (dog != null && dog.AtKennel == true)
                 {
-                    dog.atKennel = false;
+                    dog.AtKennel = false;
                     _calcBill.CalcTotal(dog);
-                    _tools.ConfirmAndClearConsol($"Checked out {dog.name}");
+                    _tools.ConfirmAndClearConsol($"Checked out {dog.Name}");
                 }
                 else
                 {

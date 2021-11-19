@@ -10,8 +10,8 @@ namespace Uppgift_1_CodePattern.Interfaces
     internal interface IPet 
     {
         
-        string name { get; set; }
-        ICustomer owner { get; set; }
-        bool atKennel { get; set; }
+        string Name { get; set; }
+        ICustomer Owner { get; set; }
+        bool AtKennel { get; set; }
     }
 }

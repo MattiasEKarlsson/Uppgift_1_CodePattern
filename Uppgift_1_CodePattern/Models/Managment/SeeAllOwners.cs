@@ -24,7 +24,7 @@ namespace Uppgift_1_CodePattern.Models.Managment
             Console.WriteLine("**********************");
             foreach (var client in clients)
             {
-                Console.WriteLine($"{client.firstName} PhoneNumber:{client.phoneNumber} Email: {client.email} {client.GetType().Name.ToString()}");
+                Console.WriteLine($"{client.FirstName} PhoneNumber:{client.PhoneNumber} Email: {client.Email} {client.GetType().Name.ToString()}");
             }
             _tools.WaitForKeyPress();
         }
