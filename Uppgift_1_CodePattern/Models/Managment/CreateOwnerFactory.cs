@@ -14,30 +14,23 @@ namespace Uppgift_1_CodePattern.Models.Managment
     {
         private Owner.Factory _factory;
         private ITools _tools;
+        private IAskForInput _askForInput;
 
 
 
-        public CreateOwnerFactory(Owner.Factory factory, ITools tools)
+        public CreateOwnerFactory(Owner.Factory factory, ITools tools, IAskForInput askForInput)
         {
             _factory = factory;
             _tools = tools;
+            _askForInput = askForInput;
         }
 
         public ICustomer CreateCustomer()
         {
-            
-            Console.WriteLine("Enter first name:");
-            string firstName = Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Enter last name:");
-            string lastName = Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Enter phonenumber:");
-            string phoneNumber = Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Enter Email:");
-            string email = Console.ReadLine();
-            Console.Clear();
+            string firstName = _askForInput.AskForInput("first name:", 3);
+            string lastName = _askForInput.AskForInput("last name:", 3);
+            string phoneNumber = _askForInput.AskForInput("phonenumber:",8);
+            string email = _askForInput.AskForInput("email address:", 5);
 
             ICustomer customer = _factory(firstName, lastName, phoneNumber, email);
             _tools.ConfirmAndClearConsol("Customer added.");

@@ -14,22 +14,20 @@ namespace Uppgift_1_CodePattern.Models.Managment
     {
         private ITools _tools;
         private Dog.Factory _factory;
+        private IAskForInput _askForInput;
 
-        public CreateDogFactory(ITools tools, Dog.Factory factory)
+        public CreateDogFactory(ITools tools, Dog.Factory factory, IAskForInput askForInput)
         {
             _tools = tools;
             _factory = factory;
+            _askForInput = askForInput;
         }
 
         public IPet CreatePet(List<ICustomer> customers)
         {
-           
-            Console.WriteLine("Enter pets name:");
-            string petName = Console.ReadLine();
-            Console.Clear();
-            Console.WriteLine("Enter owners phonenumber:");
-            string input = Console.ReadLine();
-            Console.Clear();
+            string petName = _askForInput.AskForInput("pets name:", 3);
+            string input = _askForInput.AskForInput("owners phonenumber:", 4);
+            
             ICustomer owner = customers.FirstOrDefault(name => name.PhoneNumber == input);
             if (owner != null)
             {

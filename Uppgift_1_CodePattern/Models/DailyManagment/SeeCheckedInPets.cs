@@ -24,7 +24,7 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
             Console.WriteLine("**********************");
             foreach (IPet pet in query)
             {
-                Console.WriteLine($"{pet.Name} Owner:{pet.Owner.FirstName} Owners phonnumber: {pet.Owner.PhoneNumber}");
+                Console.WriteLine($"{pet.Name} -- Owner:{pet.Owner.FirstName} {pet.Owner.LastName} -- Phone number: {pet.Owner.PhoneNumber}");
             }
             _tools.WaitForKeyPress();
         }

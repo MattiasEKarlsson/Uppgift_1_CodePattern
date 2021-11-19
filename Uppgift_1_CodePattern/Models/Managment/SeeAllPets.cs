@@ -23,7 +23,7 @@ namespace Uppgift_1_CodePattern.Models.Managment
 
             foreach (var pet in pets)
             {
-                Console.WriteLine($"{pet.Name} Owner: {pet.Owner.FirstName} Phone: {pet.Owner.PhoneNumber}");
+                Console.WriteLine($"{pet.Name} -- Owner: {pet.Owner.FirstName} {pet.Owner.LastName} -- Phone number: {pet.Owner.PhoneNumber}");
             }
             _tools.WaitForKeyPress();
         }
