@@ -28,11 +28,11 @@ namespace Uppgift_1_CodePattern
             builder.RegisterType<Application>().As<IApplication>();
             builder.RegisterType<ConsoleMenu>().As<IMainMenu>();
 
-            //Create Owner
+            
             builder.RegisterType<Owner>().As<ICustomer>();
             builder.RegisterType<CreateOwnerFactory>().As<ICreateCustomer>();
             builder.RegisterType<Owner>();
-            //Create Dog/Pet
+            
             builder.RegisterType<CreateDogFactory>().As<ICreatePet>();
             builder.RegisterType<Dog>().As<IDog>();
             builder.RegisterType<Dog>();

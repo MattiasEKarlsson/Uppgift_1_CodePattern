@@ -15,20 +15,22 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
         private readonly IDog _dog;
         private readonly ICalcBill _calcBill;
         private readonly ITools _tools;
+        private readonly IAskForInput _askForInput;
 
-        public CheckInAndOutPet(IDog dog, ICalcBill calcBill, ITools tools)
+        public CheckInAndOutPet(IDog dog, ICalcBill calcBill, ITools tools, IAskForInput askForInput)
         {
             _dog = dog;
             _calcBill = calcBill;
             _tools = tools;
+            _askForInput = askForInput;
         }
 
         public void CheckInPet(List<IPet> pets)
         {
-            Console.WriteLine("Enter name of pet to check in:");
-            string inputName = Console.ReadLine();
-            
-                IPet pet = pets.FirstOrDefault(name => name.Name.ToLower() == inputName.ToLower());
+            Console.WriteLine("Checkin");
+            string inputName = _askForInput.AskForInput("pets name:", 3);
+            IPet pet = pets.FirstOrDefault(name => name.Name.ToLower() == inputName.ToLower());
+
                 IDog dog = (IDog)pet;
                 Console.Clear();
 
@@ -59,9 +61,9 @@ namespace Uppgift_1_CodePattern.Models.DailyManagment
 
         public void CheckOutPet(List<IPet> pets)
         {
-            Console.WriteLine("Enter name of pet to check out:");
-            string inputName = Console.ReadLine();
-                Console.Clear();
+            Console.WriteLine("Checkout");
+            string inputName = _askForInput.AskForInput("pets name:", 3);
+            Console.Clear();
                 IPet pet = pets.FirstOrDefault(name => name.Name.ToLower() == inputName.ToLower());
                 IDog dog = (IDog)pet;
                 if (dog != null && dog.AtKennel == true)
